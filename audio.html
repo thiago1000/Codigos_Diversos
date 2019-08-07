@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p><button class="playaudio btn" data-audiourl="audio/5.mp3" style="padding-top: 0;">Narração</button></p>
+
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script>
+	var listaAudios = {};
+    $(document).ready(function () {
+        $('.playaudio').each(function(i){
+        	var btn = $(this);
+            var url = btn.attr('data-audiourl');
+            var audioPlay = new Audio(url);
+            audioPlay.preload = "auto";
+            listaAudios[url] = audioPlay;
+            btn.click(function(e){
+            	e.preventDefault();
+            	for (var key in listaAudios) {
+            		listaAudios[key].pause();
+            	}
+            	var audio = listaAudios[url]; 
+            	audio.currentTime = 0;
+                audio.volume = 1;
+                audio.play();
+            });
+        });
+    });
+</script>
+</body>
+</html>

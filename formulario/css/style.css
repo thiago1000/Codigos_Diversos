@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+* {
+  	box-sizing: border-box;
+  	font-family:'Lato', sans-serif;
+}
+
+body {
+  background-color: #f1f1f1;
+}
+#main{
+	margin: 0 auto;
+	width: 50%;
+}
+
+#regForm {
+  background-color: #ffffff;
+  border-radius: 20px;
+}
+
+header{
+	background-color:#f04c4c;
+	border-radius: 20px 20px 0 0;
+}
+
+h1 {
+  text-align: center;  
+  font-family: Arial;
+  color: white;
+  font-size: 35px;
+  margin: 0px;
+
+}
+
+input {
+	width: 50%;
+	height: 30px;
+}
+input[type="radio"] {
+	width: auto;
+}
+
+/* Marca as caixas de entrada que recebem um erro na validação: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Esconda todas as etapas por padrão: */
+.tab {
+  display: none;
+  margin-top: 60px;
+  font-size: 20px;
+}
+
+button {
+  background-color:#f04c4c;
+  cursor: pointer;
+  border: none;
+  color: white;
+  font-size: 20px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#prevBtn {
+  background-color: #bbbbbb;
+}
+
+.greenico{
+  color: green;
+}
+.redico{
+  color: red;
+}
+
+/* círculos que indicam as etapas do formulário: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;  
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+/* Marca as etapas concluídas e válidas: */
+.step.finish {
+  background-color: #4CAF50;
+}
+
+/*Modal*/
+.window{
+    display:none;
+    width:100%;
+    height:100%;
+    position:absolute;
+    left:0;
+    top:0;
+    background:#FFF;
+    z-index:9900;
+    padding:10px;
+    border-radius:10px;
+}
+
+.window h4{
+
+}
+
+.window p{
+  
+}
+ 
+#mascara{
+    display:none;
+    position:absolute;
+    left:0;
+    top:0;
+    z-index:9000;
+    background-color:#000;
+}
+ 
+.fechar{
+  display:block; 
+  text-align:right;
+}
+
+.btnModal{
+  display: none;
+}
+

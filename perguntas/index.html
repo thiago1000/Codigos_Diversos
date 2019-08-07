@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Perguntas</title>
+	<script src="jquery.js"></script>
+	<style>
+		body{
+			margin: 0;
+		}
+		h1, h2{
+			text-align: center;
+		}
+		p{
+			font-size: 18px;
+		}
+		.main{
+			width: 100vw;
+	        height: 100vh;
+	        /*background: #6C7A89;*/
+	        display: flex;
+	        flex-direction: row;
+	        justify-content: center;
+	        align-items: center
+		}
+		.container{
+			width: 30vw;
+        	height: 100%;
+		}
+		.opcoes{
+			font-size:18px;
+		}
+	</style>
+
+</head>
+<body>
+	<header>
+		<h1>Perguntas e Respostas</h1>
+	</header>
+	<div class="main">
+		<div class="container">
+			<form action="index.html">
+				<div class="perguntas">
+					<p>1 - Qual a capital da Austrália ?</p>
+					<div class="opcoes">
+						<input type="radio" name="questao" value="A" />Camberra<br>
+						<input type="radio" name="questao" value="B" />Londres<br>
+						<input type="radio" name="questao" value="C" />Sidney<br>
+						<input type="radio" name="questao" value="D" />Tóquio<br>
+					</div>
+				</div>
+			</form>
+			<form action="index.html">
+				<div class="perguntas">
+					<p>2 - Qual desses filmes não foi dirigido por Quentin Tarantino ?</p>
+					<div class="opcoes">
+						<input type="radio" name="questao" value="A" />Bastados Inglórios<br>
+						<input type="radio" name="questao" value="B" />Pulp Fiction<br>
+						<input type="radio" name="questao" value="C" />Assassinos por Natureza<br>
+						<input type="radio" name="questao" value="D" />Jack Brown<br>
+					</div>
+				</div>
+			</form>
+			<form action="index.html">
+				<div class="perguntas">
+					<p>3 - Qual o nome do irmão de Thor, o vilão do filme "Os Vingadores"?</p>
+					<div class="opcoes">
+						<input type="radio" name="questao" value="A" />Koqui<br>
+						<input type="radio" name="questao" value="B" />Loqui<br>
+						<input type="radio" name="questao" value="C" />Koki<br>
+						<input type="radio" name="questao" value="D" />Loki<br>
+					</div>
+				</div>
+			</form>
+			<form action="index.html">
+				<div class="perguntas">
+					<p>4 - Quais destes times já foram campeões mundiais?</p>
+					<div class="opcoes">
+						<input type="checkbox" name="questao" value="A" />Palmeiras<br>
+						<input type="checkbox" name="questao" value="B" />Corinthians<br>
+						<input type="checkbox" name="questao" value="C" />São Paulo<br>
+						<input type="checkbox" name="questao" value="D" />Santos<br>
+					</div>
+				</div>
+			</form>
+			<form action="index.html">
+				<div class="perguntas">
+					<p>5 - Quais destes Filmes não pertecem a Marvel?</p>
+					<div class="opcoes">
+						<input type="checkbox" name="questao" value="A" />Vingadores<br>
+						<input type="checkbox" name="questao" value="B" />Batman vs Superman<br>
+						<input type="checkbox" name="questao" value="C" />Esquadrão Suicida<br>
+						<input type="checkbox" name="questao" value="D" />Doutor Estranho<br>
+					</div>
+				</div>
+			</form>
+			<br>
+			<div id="finalizar">        
+				<input type="button" id="button" value="Resultado"/>
+			</div>
+			
+			<div>
+			    <h2>Seu Resultado</h2>
+			    <br>
+			    <span>Resultado: </span><span id="resultados"></span>
+			</div>
+		</div>
+	</div>
+
+	<script>
+	
+	// Array com as respostas corretas
+	var respostas = [
+    "Camberra", "A",
+    "Assassinos por Natureza", "C",
+    "Loki", "D",
+    "Corinthians", "B",
+    "São Paulo", "C",
+    "Santos", "D",
+    "Batman vs Superman", "B",
+    "Esquadrão Suicida", "C"
+	];
+
+	//Falta ajustar para as respostas do checkbox apareçam certas
+
+	// Função para verificar se a resposta do input radio está correta
+	function calcular_resultado() {
+    	var resultado = {certa: 0, errada: 0, respondidas: [], semrespostas: [], perdeu: []};
+    	console.log(resultado);
+	    $("form .opcoes").each(function(index) {
+	        var check = $(this).find("input:checked");
+	        if (check.length) {
+	            resultado.respondidas.push(index);
+	            if (check.val() == respostas[(index * 2) + 1]) {
+	                resultado.certa++;
+	                resultado.respondidas.push(index);
+	                console.log(respostas[(index * 2) + 1]);
+	            } else {
+	                resultado.errada++;
+	                resultado.perdeu.push(index);
+	                console.log(index);
+	            }
+	        } else {
+	            resultado.semrespostas.push(index);
+	        }
+	    });
+    	return(resultado);
+	}
+
+	// Ao finalizar o questionário pego as resposta corretas e imprimo na tela a quantidade de certas e erradas
+	$("#finalizar").click(function() {
+	    var results = calcular_resultado();
+	    var str = "Corretas: " + results.certa + ", Erradas: " + results.errada + ", Sem resposta: " + results.semrespostas.length;
+	    $("#resultados").html(str);
+	});
+
+	</script>	
+</body>
+</html>

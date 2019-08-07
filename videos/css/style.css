@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+body{
+	margin: 0;
+	font-family:'Lato', sans-serif;
+}
+
+#main{
+	margin: 0 auto;
+	width: 50%; 
+}
+/*menu*/
+
+.navbar{
+	background:linear-gradient(to left, rgba(245,134,100) , rgba(239,65,66));
+	height: 100px;
+}
+
+.navbar img{
+	width: 250px;
+    padding-left: 30px;
+}
+
+#menu{
+	float: right;
+}
+
+.nav-toggle {
+  display: block;
+  padding: 40px 10px 15px 10px;
+  background: rgba(245,134,100);;
+  /*position: fixed;*/
+  top: 0px;
+  left: 0px;
+  z-index: 50;
+}
+.hamburger {
+  width: 1.08em;
+  position: relative;
+  display: inline-block;
+  height: 0.6em;
+  font-size: 1.2em;
+  background: rgba(245,134,100);
+}
+.hamburger span {
+  width: 100%;
+  background: #ffffff;
+  display: block;
+  position: absolute;
+  left: 0px;
+  height: 0.185em;
+  border-radius: 1.2px;
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -o-transition: 0.5s all;
+}
+.hamburger span:nth-child(1) {
+  top: 0px;
+}
+.hamburger span:nth-child(2) {
+  top: 0.36em;
+}
+.hamburger span:nth-child(3) {
+  top: 0.73em;
+}
+.sidebar {
+  width: 20%;
+  height: 100%;
+  position: fixed;
+  background: #ffffff;
+  top: 100px;
+  right: 0px;
+  z-index: 5;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s all;
+  -webkit-transition: 0.2s all;
+  -ms-transition: 0.2s all;
+  -moz-transition: 0.2s all;
+  -o-transition: 0.2s all;
+}
+
+.sidebar div{
+	background-color: #ef4142;
+	padding:1px;
+}
+
+.sidebar div p{
+	text-align: center;
+	font-size: 18px;
+	color: #ffffff;
+	font-weight: bold;
+}
+	
+.sidebar ul{
+	list-style:none;
+	padding-left: 0;
+}
+
+.sidebar ul li{
+	text-align: justify;
+	padding:10px;
+	height: 35px;
+	border-bottom: 1px solid #fcdddd;
+}
+
+.sidebar ul li a{
+	text-decoration: none;
+	font-size: 18px;
+	color: #ef4142;
+}
+
+#navicon {
+  display: none;
+}
+#navicon:checked ~ .sidebar {
+  visibility: visible;
+  opacity: 1;
+}
+#navicon:checked ~ .nav-toggle > .hamburger span {
+  top: 0.36em;
+}
+#navicon:checked ~ .nav-toggle > .hamburger span:nth-child(1) {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+#navicon:checked ~ .nav-toggle > .hamburger span:nth-child(2) {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+#navicon:checked ~ .nav-toggle > .hamburger span:nth-child(3) {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+}
+
+.fechar{
+	cursor: pointer;
+}
+
+
+/*fim menu*/
+
+#video_ctrl{
+	width: 100%;
+}
+ 
+.title h2{
+	font-family:'Lato', sans-serif;
+	font-weight: bold;
+	background-color:#ef4142; 
+	color: #ffffff;	
+	width: 225px;
+	padding: 8px 8px 8px 8px;
+	margin-bottom: 7px;
+	text-align: center;
+	letter-spacing:1px;
+}
+
+#play{
+	float: left;
+	width: 5%;
+	height: 30px;
+    background-color: #ef4142;
+    border: none;
+}
+
+#play:focus{
+	box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+#currenttime, #duration{
+	font-size: 14px;
+	padding-top:6px;
+}
+
+@-moz-document url-prefix() {
+    #currenttime, #duration {font-size: 13px;}
+}
+
+.control{
+	display: table;
+	width: 100%;
+}
+
+progress{
+	width: 81%;
+	margin-left: 1%;
+	height: 17px;
+	margin-top: 6px;
+	background-color: #dedede;
+	-webkit-appearance: none;
+	border:none;
+}
+
+progress::-webkit-progress-value {
+  background-color: #ef4142;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #dedede;
+}
+
+progress::-moz-progress-bar {
+  background-color: #ef4142;
+}
+
+progress::-ms-fill {
+  background-color: #ef4142;
+}
+
+#currenttime{
+	float: left;
+	margin-left: 9px;
+}
+
+#duration{
+	float: left;
+}
+
+.pergunta{
+	margin: 0 auto;
+	width: 50%;
+}
+
+.pergunta form h3{
+	color: #424242;
+	font-size: 24px;
+}
+
+@-moz-document url-prefix() {
+    .pergunta form h3 {font-size: 23px;}
+}
+
+.opcoes input[type='radio'] {
+}
+
+.opcoes label{
+	font-size: 18px;
+}
+.aparecer{
+	display: none;
+}
+
+.container{
+	margin-bottom: 35px;
+}
+.container a{
+	text-decoration: none;
+	color: #ef4142;
+	float: right;
+	font-size: 25px;
+	margin-top: 30px;
+}
+
+.icofont-check-circled, .icofont-lock{
+	color:#ef4142; 
+	vertical-align: middle;
+    font-size: 23px;
+}
+
+

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Formulário</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link href="fonts/css/icofont.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+</head>
+<body>
+	<div id="main">
+		<form id="regForm" action="#">
+		 	<header>
+		 		<h1>Plano de Nomeações</h1>
+		 	</header>
+		  	<!-- Uma "div" para cada etapa do formulário. Pode colocar mais elementos -->
+		  	<div class="tab">
+		    	<p>Distrito: <input placeholder="Distrito.." oninput="this.className = ''" name="distrito" id="distrito"></p>
+		    	<p>Distribuição: <input placeholder="Distribuição..." oninput="this.className = ''" name="distribuicao" id="distribuicao"></p>
+		    	<p>Nome da Empresária: <input placeholder="Empresária..." oninput="this.className = ''" name="empresaria" id="empresaria"></p>
+		    	<p>Data: <input type="date" placeholder="Data..." oninput="this.className = ''" name="data"></p>
+		  	</div>
+		  	<!--<div class="tab">Quais cidades compõe seu Distrito:
+		    	<p><input placeholder="Cidade..." oninput="this.className = ''" name="cidade" class="cidade"></p>
+		    	
+		    	<a href="#" id="addCidade">Adicionar</a>
+		  	</div> -->
+		  	<div class="tab">Escreva nos espaços abaixo todas as cidades que compõe o seu Distrito:
+		  		<select id="estados" oninput="this.className = ''" name="estados[]" class="estados">
+					<option value=""></option>
+				</select>
+				<select id="cidades" oninput="this.className = ''" name="cidades[]" class="cidades">
+				</select>
+				<div id="adicionar"></div>
+		    	<p><button id="addCidade">Adicionar Cidade</button></p>
+		  	</div>
+		  	<div class="tab">Escreva nos espaços abaixo todas as cidades que compõe o seu Distrito: <br>
+		  		<i>Dica: acesse <a href="https://cidades.ibge.gov.br">IBGE</a></i>
+		    	<p><span class="escolha"> </span>: Número de habitantes:<br><input type="number" placeholder="Número de habitantes" oninput="this.className = ''" name="habitantes"></p>
+		    	<p>Salário médio mensal dos habitantes:<br><input type="number" placeholder="Salário médio mensal" oninput="this.className = ''" name="salario"></p>
+		  	</div>
+		  	<div class="tab">Para cada cidade, assinale uma opção.
+		    	<p><span class="escolha"> </span>: Existe oportunidade de crescimento:
+		    		<input type="radio" name="oportunidade" value="sim"/>Sim
+					<input type="radio" name="oportunidade" value="não"/>Não
+				</p>
+				<p><span class="escolha"> </span>: Existe potencial para atrair mais consumidores:
+		    		<input type="radio" name="potencial" value="sim"/>Sim
+					<input type="radio" name="potencial" value="não"/>Não
+				</p>
+		  	</div>
+		  	<div class="tab">Para cada uma das cidades, preencha as informações sobre a sua força de vendas,com base
+		  	no relátorio de venda por cidade.
+		    	<p><span class="escolha"> </span>: Número de Consultores cadastrados:<br><input type="number" placeholder="Número de consultores" oninput="this.className = ''" name="consultores" id="n1"></p>
+		    	<p><span class="escolha"> </span>: Número de Lideres cadastrados:<br><input type="number" placeholder="Número de Lideres" oninput="this.className = ''" name="lideres" id="n2" onblur="calcular()"></p>
+		    	<div id="resultado"></div>
+		  	</div>
+		  	<div class="tab">Agora, vamos analisar quem são seus Prospects. <br>
+		  		<i>Dica: consulte o relatório Candidatas a Prospect</i>
+		  		<p>Escreva abaixo o nome de 6 Prospects com os maiores volumes de recrutamento. <br>
+		  			<i>Dica: para ser nomeado, o Prospect precisa de 8 recrutas ativos</i>
+		  		</p>
+		  		<p>Nome do Consultor 1:<input type="text" placeholder="Nome do consultor" oninput="this.className = ''" name="consultor">
+		  		</p>
+		  		<p>Número de Recrutas:<input type="number" placeholder="Número de recrutas" oninput="this.className = ''" name="recrutas" id="n3" onblur="calcular()">
+		  		</p><span class="recruta"></span>
+		  		<p>Nome do Consultor 2:<input type="text" placeholder="Nome do consultor" oninput="this.className = ''" name="consultor">
+		  		</p>
+		  		<p>Número de Recrutas:<input type="number" placeholder="Número de recrutas" oninput="this.className = ''" name="recrutas" id="n4" onblur="calcular()"></p><span class="recruta"></span>
+		  		<p>Nome do Consultor 3:<input type="text" placeholder="Nome do consultor" oninput="this.className = ''" name="consultor">
+		  		</p>
+		  		<p>Número de Recrutas:<input type="number" placeholder="Número de recrutas" oninput="this.className = ''" name="recrutas" id="n5" onblur="calcular()">
+		  		</p><span class="recruta"></span>
+		  		<p>Nome do Consultor 4:<input type="text" placeholder="Nome do consultor" oninput="this.className = ''" name="consultor"></p>
+		  		<p>Número de Recrutas:<input type="number" placeholder="Número de recrutas" oninput="this.className = ''" name="recrutas" id="n6" onblur="calcular()">
+		  		</p><span class="recruta"></span>
+		  		<p>Nome do Consultor 5:<input type="text" placeholder="Nome do consultor" oninput="this.className = ''" name="consultor">
+		  		</p>
+		  		<p>Número de Recrutas :<input type="number" placeholder="Número de recrutas" oninput="this.className = ''" name="recrutas" id="n7" onblur="calcular()">
+		  		</p><span class="recruta"></span>
+		  		<p>Nome do Consultor 6:<input type="text" placeholder="Nome do consultor" oninput="this.className = ''" name="consultor">
+		  		</p>
+		  		<p>Número de Recrutas:<input type="number" placeholder="Número de recrutas" oninput="this.className = ''" name="recrutas" id="n8" onblur="calcular()">
+		  		</p><span class="recruta"></span>
+		  		<p>Preencha também o volume de vendas (pessoais + grupo) de cada um deles. <br>
+		  			<i>Dica: para ser nomeado, o Prospect precisa de, no mínimo, vendas = R$ 4.640,00 no Vitrine que antecede a nomeação (venda pessoal + venda das recrutas)</i>
+		  		</p>
+		  		<p>Vendas por volume do Consultor 1:<input type="text" placeholder="Vendas por volume" oninput="this.className = ''" name="vendas" onblur="calcular()" id="n9"><span class="vendas"></span>
+		  		</p>
+		  		<p>Vendas por volume do Consultor 2:<input type="text" placeholder="Vendas por volume" oninput="this.className = ''" name="vendas" onblur="calcular()" id="n10"><span class="vendas"></span>
+		  		</p>
+		  		<p>Vendas por volume do Consultor 3:<input type="text" placeholder="Vendas por volume" oninput="this.className = ''" name="vendas" onblur="calcular()" id="n11"><span class="vendas"></span>
+		  		</p>
+		  		<p>Vendas por volume do Consultor 4:<input type="text" placeholder="Vendas por volume" oninput="this.className = ''" name="vendas" onblur="calcular()" id="n12"><span class="vendas"></span>
+		  		</p>
+		  		<p>Vendas por volume do Consultor 5:<input type="text" placeholder="Vendas por volume" oninput="this.className = ''" name="vendas" onblur="calcular()" id="n13"><span class="vendas"></span>
+		  		</p>
+		  		<p>Vendas por volume do Consultor 6:<input type="text" placeholder="Vendas por volume" oninput="this.className = ''" name="vendas" onblur="calcular()" id="n14"><span class="vendas"></span>
+		  		</p>	
+		  	</div>
+
+		  	<div style="overflow:auto;">
+		    	<div class="botao" style="float:right;">
+		      		<button type="button" id="prevBtn" onclick="nextPrev(-1)">Anterior</button>
+		      		<button type="button" id="nextBtn" onclick="nextPrev(1)">Próxima</button>
+		      		<!-- <button type="submit" value="imprimir"> -->
+		 			<a href="#janela1" rel="modal" class="btnModal">Ver dados</a>
+		    	</div>
+		  	</div>
+		  	<!-- Círculos que indicam as etapas do formulário: -->
+		  	<div style="text-align:center;margin-top:40px;">
+		    	<span class="step"></span>
+		    	<span class="step"></span>
+		    	<span class="step"></span>
+		    	<span class="step"></span>
+		    	<span class="step"></span>
+		    	<span class="step"></span>
+		    	<span class="step"></span>
+		    	<span class="step"></span>
+		    	<span class="step"></span>
+		    	
+		  	</div>
+		</form>
+
+		
+ 
+		<div class="window" id="janela1">
+		    <a href="#" class="fechar">X Fechar</a>
+		    <h4>Dados</h4>
+		    <!-- <p>Distrito: <span id="dado1"></span></p>
+		    <p>Distribuição: <span id="dado2"></span></p> -->
+		</div>
+		 
+		 
+		<!-- mascara para cobrir o site -->  
+		<div id="mascara"></div>
+		</div>
+
+	<script src="js/jquery.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/jquery.internal.js"></script>
+		
+</body>
+</html>

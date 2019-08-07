@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/mobile.css" rel="stylesheet">
+	<link href="fonts/css/icofont.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<header>
+		<div class="navbar">
+				<img src="img/tupperware.png" alt="logo">	
+			<div id="menu">
+				<input type="checkbox" id="navicon">
+				<div class="nav-toggle">
+  				<label for="navicon" class="hamburger">
+			    <span></span>
+			    <span></span>
+			    <span></span>
+			  </label>
+			</div>
+			<nav class="sidebar" role="complementary">
+				<div><p>PROGRESSO</p></div>
+				<ul>
+					<li><i class="icofont icofont-check-circled"></i><a href="">Primeiro Video</a></li>
+					<li><a href="">Segundo Video</a></li>
+					<li><i class="icofont icofont-lock"></i><a href="">Terceiro Video</a></li>
+					<li><a href="">Quarto Video</a></li>
+					<li><a href="">Quinto Video</a></li>
+					<li><a href="">Sexto Video</a></li>
+					<li><a href="">Sétimo Video</a></li>
+				</ul>
+				<div><p class="fechar">FECHAR X</p></div>
+			</nav>
+			</div>
+		</div>
+	</header>
+	
+	<div id="main">
+		<div class="container">
+			<div class="title">
+				<h2>Relatórios: video 1</h2>
+			</div>
+			<section class="video">
+				<video id="video_ctrl" src="video/movie.mp4" onclick="videoplay()"></video>
+				<div class="control">
+					<button id="play" onclick="videoplay()">&gt;</button>
+					<progress id="barra" max="100" value="0"></progress>
+					<span id="currenttime">00:00</span>
+					<span id="duration"></span>
+				</div>
+			</section>
+		</div>
+		<div class="container aparecer">
+			<div class="title">
+				<h2>Atividades</h2>
+			</div>
+			<section class="pergunta">
+				<form>
+					<h3>Como você organiza sua rotina ?</h3>
+					<div class="opcoes">
+						<input type="radio" name="opcao" value="1"><label for="opcao">Apenas faço minhas vendas e encontros</label><br>
+						<input type="radio" name="opcao" value="2"><label for="opcao">Anoto tudo em um caderno</label><br>
+						<input type="radio" name="opcao" value="3"><label for="opcao">Tenho tudo na minha cabeça</label><br>
+					</div>
+				</form>
+			</section>
+			<div id="finalizar">
+				<a href="#">PRÓXIMA</a>
+			</div>
+			<!-- <div>
+			    <h2>Seu Resultado</h2>
+			    <br>
+			    <span>Resultado: </span><span id="resultados"></span>
+			</div> -->
+		</div>
+	</div>	
+
+	<script src="js/jquery.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

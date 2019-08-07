@@ -1,0 +1,66 @@
+@media screen and (max-width: 768px) {
+	
+	#main{
+		width: 100%;
+	}
+
+	.title{
+		width: 100%
+	}
+
+	.title h2{
+		width: 100%;
+		text-align: center;
+		padding-left: 0px;
+		padding-right:0px;	
+	}
+
+	.sidebar {
+  		width: 40%;
+	}
+
+	.sidebar div p ,.sidebar ul li a {
+    	font-size: 14px;
+	}
+
+	progress {
+   	 	width: 69%
+	}	
+
+	#play{
+		height: 30px;
+	}
+
+	.pergunta{
+		width: 100%;
+	}
+	
+	.pergunta form h3{
+		font-size: 20px;
+    	text-align: center;
+	}
+
+	.container a{
+		font-size: 20px;
+	}
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1125px) {
+	progress {
+    	width: 78%
+    }
+    
+    .pergunta form h3{
+    	font-size: 18px;
+    }
+
+    .opcoes label {
+    	font-size: 14px;
+    }
+
+    .container a{
+    	font-size: 22px;
+    }
+
+}

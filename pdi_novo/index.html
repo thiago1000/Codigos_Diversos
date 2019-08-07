@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Plano de Nomeações</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/framework.css">
+	<link rel="stylesheet" href="css/icofont.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet"> 
+</head>
+<body>
+	<div class="container main">
+		<div class="row">
+			<form method="POST" onsubmit="return false;" id="conteudo">
+				<div class="col-12">
+					<div class="container">
+						<div class="row">
+							<div class="col-12 titulo">
+								<h1>Meu plano de nomeações</h1>
+								<p>Chegou a hora de colocar em prática tudo que você aprendeu.</p>
+								<p>Você irá elaborar o Plano de Nomeações do seu Distrito para os próximos seis Vitrines. Lembre-se de praticar o passo a passo aprendido no módulo 2.</p>
+							</div>
+						</div>
+					</div>
+					<!-- Dados -->
+					<div class="container">
+						<div class="row">
+							<div class="col-12 pergunta">
+								<label for="distrito" class="label">Distrito:</label>
+								<input type="text" name="distrito" id="distrito">
+								<label for="distribuicao" class="label">Distribuição:</label>
+								<input type="text" name="distribuicao" id="distribuicao">
+								<label for="empresaria" class="label">Nome da Empresária:</label>
+								<input type="text" name="empresaria" id="empresaria">
+								<label for="data" class="label">Data:</label>
+								<input type="date" name="data" id="data">
+							</div>
+						</div>
+					</div>
+					<!-- Pergunta 1 -->
+					<div class="container pergunta-1">
+						<div class="row">
+							<div class="col-12 pergunta">
+								<div class="titulo">
+									<p>1) Escreva nos espaços abaixo todas as cidades que compõe o seu Distrito</p>
+									<p><i>Dica: consulte o relatório Vendas por cidade</i></p>
+								</div>
+							</div>
+							<table class="table table-border">
+								<tbody>
+								    <tr>
+								    	<td>
+								      		<label for="cidade" class="label">Cidade:</label>
+								      		<input type="text" name="cidade" id="cidade" class="cidade" data-valor="cidades">
+								      	</td>
+								      	<td>
+								      		<label for="cidade2" class="label">Cidade:</label>
+								      		<input type="text" name="cidade2" id="cidade2" class="cidade" data-valor="cidades1">
+								      	</td>
+								    </tr>
+								    <tr>
+								      	<td>
+								      		<label for="cidade3" class="label" >Cidade:</label>
+								      		<input type="text" name="cidade3" id="cidade3" class="cidade" data-valor="cidades2">
+								      	</td>
+								      	<td>
+								      		<label for="cidade4" class="label" >Cidade:</label>
+								      		<input type="text" name="cidade4" id="cidade4" class="cidade" data-valor="cidades3">
+								      	</td>
+								    </tr>
+								    <tr>
+								      	<td>
+								      		<label for="cidade5" class="label" >Cidade:</label>
+								      		<input type="text" name="cidade5" id="cidade5" class="cidade" data-valor="cidades4">
+								      	</td>
+								      	<td>
+								      		<label for="cidade6" class="label" >Cidade:</label>
+								      		<input type="text" name="cidade6" id="cidade6" class="cidade" data-valor="cidades5"><br>
+								      	</td>
+								    </tr>
+								    <tr>
+								      	<td>
+								      		<label for="cidade7" class="label" >Cidade:</label>
+								      		<input type="text" name="cidade7" id="cidade7" class="cidade" data-valor="cidades6">
+								      	</td>
+								      	<td>
+								      		<label for="cidade4" class="label" >Cidade:</label>
+								      		<input type="text" name="cidade8" id="cidade8" class="cidade" data-valor="cidades7">
+								      	</td>
+								    </tr>
+								    <tr>
+								      	<td>
+								      		<label for="cidade3" class="label" >Cidade:</label>
+								      		<input type="text" name="cidade9" id="cidade9" class="cidade" data-valor="cidades8">
+								      	</td>
+								      	<td>
+								      		<label for="cidade4" class="label" >Cidade:</label>
+								      		<input type="text" name="cidade10" id="cidade10" class="cidade" data-valor="cidades9">
+								      	</td>
+								    </tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<!-- Pergunta 2 -->
+					<div class="container pergunta-1">
+						<div class="row">
+							<div class="col-12 pergunta">
+								<div class="titulo">
+									<p>2) Agora, levante no site do IBGE algumas informações sobre cada cidade e preencha os espaços disponíveis</p>
+									<p><i>Dica: acesse <a href="https://cidades.ibge.gov.br" target="_blank" style="color:#f36600;">https://cidades.ibge.gov.br</a></i></p>
+								</div>
+							</div>
+							<table class="table table-border">
+								<tbody>
+								    <tr>
+								    	<td>
+									      	<label for="cidades" class="label">Cidade:</label>
+									      	<input type="text" name="cidades" id="cidades" class="cidades" disabled="disabled">
+								      	</td>
+								      	<td>
+									      	<label for="habitantes" class="label">Número de Habitantes:</label>
+									      	<input type="text" name="habitantes" onkeyup="somenteNumeros(this);" id="habitantes">
+								  	  	</td>
+								      	<td>
+								      		<label for="salario" class="label">Salário Médio dos Habitantes:</label>
+								      		<input type="text" name="salario" onkeyup="somenteNumeros(this);" id="salario">
+								      	</td>
+								    </tr>
+								    <tr>
+								      	<td>
+								      		<label for="cidades1" class="label">Cidade:</label>
+								      		<input type="text" name="cidades1" id="cidades1" class="cidades1" disabled="disabled">
+								      	</td>
+								      	<td>
+								      		<label for="habitantes1" class="label">Número de Habitantes:</label>
+								      		<input type="text" name="habitantes1" onkeyup="somenteNumeros(this);" id="habitantes1">
+								      	</td>
+								      	<td>
+								      		<label for="salario1" class="label">Salário Médio dos Habitantes:</label>
+								      		<input type="text" name="salario1" onkeyup="somenteNumeros(this);" id="salario1">
+								      	</td>
+								    </tr>
+								    <tr>
+								      	<td>
+								      		<label for="cidades2" class="label">Cidade:</label>
+								      		<input type="text" name="cidades2" id="cidades2" class="cidades2" disabled="disabled">
+								      	</td>
+								      	<td>
+								      		<label for="habitantes2" class="label">Número de Habitantes:</label>
+								     		<input type="text" name="habitantes2" onkeyup="somenteNumeros(this);" id="habitantes2">
+								     	</td>
+								      	<td>
+								      		<label for="salario2" class="label">Salário Médio dos Habitantes:</label>
+								      		<input type="text" name="salario2" onkeyup="somenteNumeros(this);" id="salario2">
+								      	</td>
+								    </tr>
+								    <tr>
+								      	<td>
+								      		<label for="cidades3" class="label">Cidade:</label>
+								      		<input type="text" name="cidades3" id="cidades3" class="cidades3" disabled="disabled">
+								      	</td>
+								      	<td>
+								      		<label for="habitantes3" class="label">Número de Habitantes:</label>
+								      		<input type="text" name="habitantes3" onkeyup="somenteNumeros(this);" id="habitantes3">
+								      	</td>
+								     	<td>
+								      		<label for="salario3" class="label">Salário Médio dos Habitantes:</label>
+								      		<input type="text" name="salario3" onkeyup="somenteNumeros(this);" id="salario3">
+								      	</td>
+								    </tr>
+								    <tr>
+								      	<td>
+								      		<label for="cidades4" class="label">Cidade:</label>
+								      		<input type="text" name="cidades4" id="cidades4" class="cidades4" disabled="disabled">
+								      	</td>
+								      	<td>
+								      		<label for="habitantes4" class="label">Número de Habitantes:</label>
+								      		<input type="text" name="habitantes4" onkeyup="somenteNumeros(this);" id="habitantes4">
+								      	</td>
+								      	<td>
+								      		<label for="salario4" class="label">Salário Médio dos Habitantes:</label>
+								      		<input type="text" name="salario4" onkeyup="somenteNumeros(this);" id="salario4">
+								      	</td>
+								    </tr>
+								    <tr>
+								      	<td>
+								      		<label for="cidades5" class="label">Cidade:</label>
+								      		<input type="text" name="cidades5" id="cidades5" class="cidades5" disabled="disabled">
+								      	</td>
+								      	<td><label for="habitantes5" class="label">Número de Habitantes:</label>
+								      		<input type="text" name="habitantes5" onkeyup="somenteNumeros(this);" id="habitantes5">
+								      	</td>
+								      	<td>
+								      		<label for="salario5" class="label">Salário Médio dos Habitantes:</label>
+								      		<input type="text" name="salario5" onkeyup="somenteNumeros(this);" id="salario5">
+								      	</td>
+								    </tr>
+								     <tr>
+								      	<td>
+								      		<label for="cidades6" class="label">Cidade:</label>
+								      		<input type="text" name="cidades6" id="cidades6" class="cidades6" disabled="disabled">
+								      	</td>
+									    <td>
+									    	<label for="habitantes6" class="label">Número de Habitantes:</label>
+									    	<input type="text" name="habitantes6" onkeyup="somenteNumeros(this);" id="habitantes6">
+									    </td>
+								      	<td>
+								      		<label for="salario6" class="label">Salário Médio dos Habitantes:</label>
+								      		<input type="text" name="salario6" onkeyup="somenteNumeros(this);" id="salario6">
+								      	</td>
+								    </tr>
+								    <tr>
+									    <td>
+									    	<label for="cidades7" class="label">Cidade:</label>
+									      	<input type="text" name="cidades7" id="cidades7" class="cidades7" disabled="disabled">
+										</td>
+								      	<td>
+								      		<label for="habitantes7" class="label">Número de Habitantes:</label>
+								      		<input type="text" name="habitantes7" onkeyup="somenteNumeros(this);" id="habitantes7">
+								      	</td>
+								      	<td>
+								      		<label for="salario7" class="label">Salário Médio dos Habitantes:</label>
+								      		<input type="text" name="salario7" onkeyup="somenteNumeros(this);" id="salario7">
+								      	</td>
+								    </tr>
+								    <tr>
+								      	<td>
+								      		<label for="cidades8" class="label">Cidade:</label>
+								      		<input type="text" name="cidades8" id="cidades8" class="cidades8" disabled="disabled">
+								  		</td>
+								      	<td>
+								      		<label for="habitantes8" class="label">Número de Habitantes:</label>
+								      		<input type="text" name="habitantes8" onkeyup="somenteNumeros(this);" id="habitantes8">
+								      	</td>
+								      	<td>
+								      		<label for="salario8" class="label">Salário Médio dos Habitantes:</label>
+								      		<input type="text" name="salario8" onkeyup="somenteNumeros(this);" id="salario8">
+								      	</td>
+								    </tr>
+								    <tr>
+								      	<td>
+								      		<label for="cidades9" class="label">Cidade:</label>
+								      		<input type="text" name="cidades9" id="cidades9" class="cidades9" disabled="disabled">
+								      	</td>
+								      	<td>
+								      		<label for="habitantes9" class="label">Número de Habitantes:</label>
+									    	<input type="text" name="habitantes9" onkeyup="somenteNumeros(this);" id="habitantes9">
+									    </td>
+									    <td>
+									    	<label for="salario9" class="label">Salário Médio dos Habitantes:</label>
+								      		<input type="text" name="salario9" onkeyup="somenteNumeros(this);" id="salario9">
+								      	</td>
+								    </tr>								    
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<!-- Pergunta 2.1 -->
+					<div class="container">
+						<div class="row">
+							<div class="col-12 pergunta">
+								<div class="titulo">
+									<p>2.1) Para cada cidade, assinale uma opção.</p>
+								</div>
+							</div>
+							<table class="table table-border">
+								<tbody>
+								    <tr>
+								      	<td>
+								      		<label for="city" class="label">Cidade:</label>
+								      		<input type="text" name="city" id="city" class="cidades" disabled="disabled">
+								  		</td>
+								      	<td class="color">	
+								      		<label for="recrutamento" class="label">Existe oportunidade de recrutamento?</label>
+											<input type="radio" name="recrutamento" value="sim">Sim<br>
+				  							<input type="radio" name="recrutamento" value="nao">Não
+								      	</td>
+								      	<td class="color"> 
+								      		<label for="potencial" class="label">Existe potencial de conquistar mais consumidores?</label>
+											<input type="radio" name="potencial" value="sim">Sim<br>
+		  									<input type="radio" name="potencial" value="nao">Não
+								      	</td>
+								    </tr>
+								    <tr>
+								      	<td>
+								      		<label for="city1" class="label">Cidade:</label>
+								      		<input type="text" name="city1" id="city1" class="cidades1" disabled="disabled">
+								  		</td>
+								      	<td class="color">	
+								      		<label for="recrutamento1" class="label">Existe oportunidade de recrutamento?</label>
+											<input type="radio" name="recrutamento1" value="sim">Sim<br>
+				  							<input type="radio" name="recrutamento1" value="nao">Não
+								      	</td>
+								      	<td class="color">
+								      		<label for="potencial1" class="label">Existe potencial de conquistar mais consumidores?</label>
+											<input type="radio" name="potencial1" value="sim">Sim<br>
+		  									<input type="radio" name="potencial1" value="nao">Não
+								      	</td>
+								    </tr>
+								    <tr>
+								      	<td>
+								      		<label for="city2" class="label">Cidade:</label>
+								      		<input type="text" name="city2" id="city2" class="cidades2" disabled="disabled">
+								  		</td>
+								      	<td class="color">	
+								      		<label for="recrutamento2" class="label">Existe oportunidade de recrutamento?</label>
+											<input type="radio" name="recrutamento2" value="sim">Sim<br>
+				  							<input type="radio" name="recrutamento2" value="nao">Não
+								      	</td>
+								      	<td class="color">
+								      		<label for="potencial2" class="label">Existe potencial de conquistar mais consumidores?</label>
+											<input type="radio" name="potencial2" value="sim">Sim<br>
+		  									<input type="radio" name="potencial2" value="nao">Não
+								      	</td>
+								    </tr>
+									<tr>
+								      	<td>
+								      		<label for="city3" class="label">Cidade:</label>
+								      		<input type="text" name="city3" id="city3" class="cidades3" disabled="disabled">
+								  		</td>
+								      	<td class="color">	
+								      		<label for="recrutamento3" class="label">Existe oportunidade de recrutamento?</label>
+											<input type="radio" name="recrutamento3" value="sim">Sim<br>
+				  							<input type="radio" name="recrutamento3" value="nao">Não
+								      	</td>
+								      	<td class="color">
+								      		<label for="potencial3" class="label">Existe potencial de conquistar mais consumidores?</label>
+											<input type="radio" name="potencial3" value="sim">Sim<br>
+		  									<input type="radio" name="potencial3" value="nao">Não
+								      	</td>
+								    </tr>
+								    <tr>
+								      	<td>
+								      		<label for="city4" class="label">Cidade:</label>
+								      		<input type="text" name="city4" id="city4" class="cidades4" disabled="disabled">
+								  		</td>
+								      	<td class="color">	
+								      		<label for="recrutamento4" class="label">Existe oportunidade de recrutamento?</label>
+											<input type="radio" name="recrutamento4" value="sim">Sim<br>
+				  							<input type="radio" name="recrutamento4" value="nao">Não
+								      	</td>
+								      	<td class="color">
+								      		<label for="potencial4" class="label">Existe potencial de conquistar mais consumidores?</label>
+											<input type="radio" name="potencial4" value="sim">Sim<br>
+		  									<input type="radio" name="potencial4" value="nao">Não
+								      	</td>
+								    </tr>
+								    <tr>
+								      	<td>
+								      		<label for="city5" class="label">Cidade:</label>
+								      		<input type="text" name="city5" id="city5" class="cidades5" disabled="disabled">
+								  		</td>
+								      	<td class="color">	
+								      		<label for="recrutamento5" class="label">Existe oportunidade de recrutamento?</label>
+											<input type="radio" name="recrutamento5" value="sim">Sim<br>
+				  							<input type="radio" name="recrutamento5" value="nao">Não
+								      	</td>
+								      	<td class="color">
+								      		<label for="potencial5" class="label">Existe potencial de conquistar mais consumidores?</label>
+											<input type="radio" name="potencial5" value="sim">Sim<br>
+		  									<input type="radio" name="potencial5" value="nao">Não
+								      	</td>
+								    </tr>
+									<tr>
+								      	<td>
+								      		<label for="city6" class="label">Cidade:</label>
+								      		<input type="text" name="city6" id="city6" class="cidades6" disabled="disabled">
+								  		</td>
+								      	<td class="color">	
+								      		<label for="recrutamento6" class="label">Existe oportunidade de recrutamento?</label>
+											<input type="radio" name="recrutamento6" value="sim">Sim<br>
+				  							<input type="radio" name="recrutamento6" value="nao">Não
+								      	</td>
+								      	<td class="color">
+								      		<label for="potencial6" class="label">Existe potencial de conquistar mais consumidores?</label>
+											<input type="radio" name="potencial6" value="sim">Sim<br>
+		  									<input type="radio" name="potencial6" value="nao">Não
+								      	</td>
+								    </tr>
+								    <tr>
+								      	<td>
+								      		<label for="city7" class="label">Cidade:</label>
+								      		<input type="text" name="city7" id="city7" class="cidades7" disabled="disabled">
+								  		</td>
+								      	<td class="color">	
+								      		<label for="recrutamento7" class="label">Existe oportunidade de recrutamento?</label>
+											<input type="radio" name="recrutamento7" value="sim">Sim<br>
+				  							<input type="radio" name="recrutamento7" value="nao">Não
+								      	</td>
+								      	<td class="color">
+								      		<label for="potencial7" class="label">Existe potencial de conquistar mais consumidores?</label>
+											<input type="radio" name="potencial7" value="sim">Sim<br>
+		  									<input type="radio" name="potencial7" value="nao">Não
+								      	</td>
+								    </tr>
+								    <tr>
+								      	<td>
+								      		<label for="city8" class="label">Cidade:</label>
+								      		<input type="text" name="city8" id="city8" class="cidades8" disabled="disabled">
+								  		</td>
+								      	<td class="color">	
+								      		<label for="recrutamento8" class="label">Existe oportunidade de recrutamento?</label>
+											<input type="radio" name="recrutamento8" value="sim">Sim<br>
+				  							<input type="radio" name="recrutamento8" value="nao">Não
+								      	</td>
+								      	<td class="color">
+								      		<label for="potencial8" class="label">Existe potencial de conquistar mais consumidores?</label>
+											<input type="radio" name="potencial8" value="sim">Sim<br>
+		  									<input type="radio" name="potencial8" value="nao">Não
+								      	</td>
+								    </tr>
+								    <tr>
+								      	<td>
+								      		<label for="city9" class="label">Cidade:</label>
+								      		<input type="text" name="city9" id="city9" class="cidades9" disabled="disabled">
+								  		</td>
+								      	<td class="color">	
+								      		<label for="recrutamento9" class="label">Existe oportunidade de recrutamento?</label>
+											<input type="radio" name="recrutamento9" value="sim">Sim<br>
+				  							<input type="radio" name="recrutamento9" value="nao">Não
+								      	</td>
+								      	<td class="color">
+								      		<label for="potencial9" class="label">Existe potencial de conquistar mais consumidores?</label>
+											<input type="radio" name="potencial9" value="sim">Sim<br>
+		  									<input type="radio" name="potencial9" value="nao">Não
+								      	</td>
+								    </tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<!-- Pergunta 3 -->
+					<div class="container">
+						<div class="row">
+							<div class="col-12 pergunta">
+								<div class="titulo">
+									<p>3) Para cada uma das cidades, preencha as informações sobre a sua força de vendas, com base no relatório Venda por cidade</p>
+								</div>
+							</div>
+							<table class="table table-border">
+								<tbody>
+								    <tr>
+								      	<td>
+								      		<label for="cities" class="label">Cidade:</label>
+											<input type="text" name="cities" id="cities" class="cidades" disabled="disabled">
+								  		</td>
+								      	<td>	
+								      		<label for="consultores" class="label">Número de Consultores Cadastrados</label>
+											<input type="text" name="consultores[]" id="consultores" onkeyup="somenteNumeros(this);">
+											<span style="color:green" class="resultado"></span>
+								      	</td>
+								      	<td>
+								      		<label for="lideres" class="label">Número de Líderes Cadastrados</label>
+											<input type="text" name="lideres" id="lideres" onkeyup="somenteNumeros(this);">
+											<span style="color:green" class="resultado2"></span>
+								      	</td>
+									</tr>
+									<tr>
+								      	<td>
+								      		<label for="cities1" class="label">Cidade:</label>
+											<input type="text" name="cities" id="cities1" class="cidades1" disabled="disabled">
+								  		</td>
+								      	<td>	
+								      		<label for="consultores1" class="label">Número de Consultores Cadastrados</label>
+											<input type="text" name="consultores[]" id="consultores1" onkeyup="somenteNumeros(this);">
+											<span style="color:green" class="resultado"></span>
+								      	</td>
+								      	<td>
+								      		<label for="lideres1" class="label">Número de Líderes Cadastrados</label>
+											<input type="text" name="lideres1" id="lideres1" onkeyup="somenteNumeros(this);">
+											<span style="color:green" class="resultado2"></span>
+								      	</td>
+									</tr>
+									<tr>
+								      	<td>
+								      		<label for="cities2" class="label">Cidade:</label>
+											<input type="text" name="cities" id="cities2" class="cidades2" disabled="disabled">
+								  		</td>
+								      	<td>	
+								      		<label for="consultores2" class="label">Número de Consultores Cadastrados</label>
+											<input type="text" name="consultores[]" id="consultores2" onkeyup="somenteNumeros(this);">
+											<span style="color:green" class="resultado"></span>
+								      	</td>
+								      	<td>
+								      		<label for="lideres2" class="label">Número de Líderes Cadastrados</label>
+											<input type="text" name="lideres2" id="lideres2" onkeyup="somenteNumeros(this);">
+											<span style="color:green" class="resultado2"></span>
+								      	</td>
+									</tr>
+									<tr>
+								      	<td>
+								      		<label for="cities3" class="label">Cidade:</label>
+											<input type="text" name="cities" id="cities3" class="cidades3" disabled="disabled">
+								  		</td>
+								      	<td>	
+								      		<label for="consultores3" class="label">Número de Consultores Cadastrados</label>
+											<input type="text" name="consultores[]" id="consultores3" onkeyup="somenteNumeros(this);">
+											<span style="color:green" class="resultado"></span>
+								      	</td>
+								      	<td>
+								      		<label for="lideres3" class="label">Número de Líderes Cadastrados</label>
+											<input type="text" name="lideres3" id="lideres3" onkeyup="somenteNumeros(this);">
+											<span style="color:green" class="resultado2"></span>
+								      	</td>
+									</tr>
+									<tr>
+								      	<td>
+								      		<label for="cities4" class="label">Cidade:</label>
+											<input type="text" name="cities" id="cities4" class="cidades4" disabled="disabled">
+								  		</td>
+								      	<td>	
+								      		<label for="consultores4" class="label">Número de Consultores Cadastrados</label>
+											<input type="text" name="consultores[]" id="consultores4" onkeyup="somenteNumeros(this);">
+											<span style="color:green" class="resultado"></span>
+								      	</td>
+								      	<td>
+								      		<label for="lideres4" class="label">Número de Líderes Cadastrados</label>
+											<input type="text" name="lideres4" id="lideres4" onkeyup="somenteNumeros(this);">
+											<span style="color:green" class="resultado2"></span>
+								      	</td>
+									</tr>
+									<tr>
+								      	<td>
+								      		<label for="cities5" class="label">Cidade:</label>
+											<input type="text" name="cities" id="cities5" class="cidades5" disabled="disabled">
+								  		</td>
+								      	<td>	
+								      		<label for="consultores5" class="label">Número de Consultores Cadastrados</label>
+											<input type="text" name="consultores[]" id="consultores5" onkeyup="somenteNumeros(this);">
+											<span style="color:green" class="resultado"></span>
+								      	</td>
+								      	<td>
+								      		<label for="lideres5" class="label">Número de Líderes Cadastrados</label>
+											<input type="text" name="lideres5" id="lideres5" onkeyup="somenteNumeros(this);">
+											<span style="color:green" class="resultado2"></span>
+								      	</td>
+									</tr>
+									<tr>
+								      	<td>
+								      		<label for="cities6" class="label">Cidade:</label>
+											<input type="text" name="cities" id="cities6" class="cidades6" disabled="disabled">
+								  		</td>
+								      	<td>	
+								      		<label for="consultores6" class="label">Número de Consultores Cadastrados</label>
+											<input type="text" name="consultores[]" id="consultores6" onkeyup="somenteNumeros(this);">
+											<span style="color:green" class="resultado"></span>
+								      	</td>
+								      	<td>
+								      		<label for="lideres6" class="label">Número de Líderes Cadastrados</label>
+											<input type="text" name="lideres6" id="lideres6" onkeyup="somenteNumeros(this);">
+											<span style="color:green" class="resultado2"></span>
+								      	</td>
+									</tr>
+									<tr>
+								      	<td>
+								      		<label for="cities7" class="label">Cidade:</label>
+											<input type="text" name="cities" id="cities7" class="cidades7" disabled="disabled">
+								  		</td>
+								      	<td>	
+								      		<label for="consultores7" class="label">Número de Consultores Cadastrados</label>
+											<input type="text" name="consultores[]" id="consultores7" onkeyup="somenteNumeros(this);">
+											<span style="color:green" class="resultado"></span>
+								      	</td>
+								      	<td>
+								      		<label for="lideres7" class="label">Número de Líderes Cadastrados</label>
+											<input type="text" name="lideres7" id="lideres7" onkeyup="somenteNumeros(this);">
+											<span style="color:green" class="resultado2"></span>
+								      	</td>
+									</tr>
+									<tr>
+								      	<td>
+								      		<label for="cities8" class="label">Cidade:</label>
+											<input type="text" name="cities" id="cities8" class="cidades8" disabled="disabled">
+								  		</td>
+								      	<td>	
+								      		<label for="consultores8" class="label">Número de Consultores Cadastrados</label>
+											<input type="text" name="consultores[]" id="consultores8" onkeyup="somenteNumeros(this);">
+											<span style="color:green" class="resultado"></span>
+								      	</td>
+								      	<td>
+								      		<label for="lideres8" class="label">Número de Líderes Cadastrados</label>
+											<input type="text" name="lideres8" id="lideres8" onkeyup="somenteNumeros(this);">
+											<span style="color:green" class="resultado2"></span>
+								      	</td>
+								    </tr>
+								    <tr>
+								      	<td>
+								      		<label for="cities9" class="label">Cidade:</label>
+											<input type="text" name="cities" id="cities9" class="cidades9" disabled="disabled">
+								  		</td>
+								      	<td>	
+								      		<label for="consultores9" class="label">Número de Consultores Cadastrados</label>
+											<input type="text" name="consultores[]" id="consultores9" onkeyup="somenteNumeros(this);">
+											<span style="color:green" class="resultado"></span>
+								      	</td>
+								      	<td>
+								      		<label for="lideres9" class="label">Número de Líderes Cadastrados</label>
+											<input type="text" name="lideres9" id="lideres9" onkeyup="somenteNumeros(this);">
+											<span style="color:green" class="resultado2"></span>
+								      	</td>
+								    </tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<!-- Pergunta 4 -->
+					<div class="container pergunta-1">
+						<div class="row">
+							<div class="col-12 pergunta">
+								<div class="titulo">
+									<p>4) Agora, vamos analisar quem são seus Prospects.</p>
+									<p><i>Dica: consulte o relatório Candidatas a Prospect</i></p>
+									<p>Escreva abaixo o nome de 6 Prospects com os maiores volumes de recrutamento.</p>
+									<p>Preencha também o volume de vendas (pessoais + grupo) de cada um deles.</p>
+									<p><i>Dica: para ser nomeado, o Prospect precisa de, no mínimo, vendas = R$ 4.640,00 no Vitrine que antecede a nomeação (venda pessoal + venda das recrutas)</i></p>
+								</div>
+							</div>
+							<table class="table table-border">
+								<tbody>
+								    <tr>
+								      	<td>
+								      		<label for="consultor" class="label">Consultor</label>
+											<input type="text" name="consultor" id="consultor" class="consultor" data-valor="prospect">
+								  		</td>
+								      	<td>	
+								      		<label for="recrutas" class="label">Número de recrutas</label>
+											<input type="text" name="recrutas" id="recrutas" onkeyup="somenteNumeros(this);" style="width: 90%">
+											<span  class="resultado2"></span>
+								      	</td>
+								      	<td>
+								      		<label for="vendas" class="label">Vendas (grupo + pessoal)</label>
+											<input type="text" name="vendas" id="vendas" onkeyup="somenteNumeros(this);" style="width: 90%">
+											<span  class="resultado2"></span>
+								      	</td>
+								    </tr>
+
+								    <tr>
+								      	<td>
+								      		<label for="consultor2" class="label">Consultor</label>
+											<input type="text" name="consultor2" id="consultor2" class="consultor" data-valor="prospect2">
+								  		</td>
+								      	<td>	
+								      		<label for="recrutas2" class="label">Número de recrutas</label>
+											<input type="text" name="recrutas2" id="recrutas2" onkeyup="somenteNumeros(this);" style="width: 90%">
+											<span  class="resultado2"></span>
+								      	</td>
+								      	<td>
+								      		<label for="vendas2" class="label">Vendas (grupo + pessoal)</label>
+											<input type="text" name="vendas2" id="vendas2" onkeyup="somenteNumeros(this);" style="width: 90%">
+											<span  class="resultado2"></span>
+								      	</td>
+								    </tr>
+
+								    <tr>
+								      	<td>
+								      		<label for="consultor3" class="label">Consultor</label>
+											<input type="text" name="consultor3" id="consultor3" class="consultor" data-valor="prospect3">
+								  		</td>
+								      	<td>	
+								      		<label for="recrutas3" class="label">Número de recrutas</label>
+											<input type="text" name="recrutas3" id="recrutas3" onkeyup="somenteNumeros(this);" style="width: 90%">
+											<span  class="resultado2"></span>
+								      	</td>
+								      	<td>
+								      		<label for="vendas3" class="label">Vendas (grupo + pessoal)</label>
+											<input type="text" name="vendas3" id="vendas3" onkeyup="somenteNumeros(this);" style="width: 90%">
+											<span  class="resultado2"></span>
+								      	</td>
+								    </tr>
+
+								    <tr>
+								      	<td>
+								      		<label for="consultor4" class="label">Consultor</label>
+											<input type="text" name="consultor4" id="consultor4" class="consultor" data-valor="prospect4">
+								  		</td>
+								      	<td>	
+								      		<label for="recrutas4" class="label">Número de recrutas</label>
+											<input type="text" name="recrutas4" id="recrutas4" onkeyup="somenteNumeros(this);" style="width: 90%">
+											<span  class="resultado2"></span>
+								      	</td>
+								      	<td>
+								      		<label for="vendas4" class="label">Vendas (grupo + pessoal)</label>
+											<input type="text" name="vendas4" id="vendas4" onkeyup="somenteNumeros(this);" style="width: 90%">
+											<span  class="resultado2"></span>
+								      	</td>
+								    </tr>
+
+								    <tr>
+								      	<td>
+								      		<label for="consultor5" class="label">Consultor</label>
+											<input type="text" name="consultor5" id="consultor5" class="consultor" data-valor="prospect5">
+								  		</td>
+								      	<td>	
+								      		<label for="recrutas5" class="label">Número de recrutas</label>
+											<input type="text" name="recrutas5" id="recrutas5" onkeyup="somenteNumeros(this);" style="width: 90%">
+											<span  class="resultado2"></span>
+								      	</td>
+								      	<td>
+								      		<label for="vendas5" class="label">Vendas (grupo + pessoal)</label>
+											<input type="text" name="vendas5" id="vendas5" onkeyup="somenteNumeros(this);" style="width: 90%">
+											<span  class="resultado2"></span>
+								      	</td>
+								    </tr>
+
+								    <tr>
+								      	<td>
+								      		<label for="consultor6" class="label">Consultor</label>
+											<input type="text" name="consultor6" id="consultor6" class="consultor" data-valor="prospect6">
+								  		</td>
+								      	<td>	
+								      		<label for="recrutas6" class="label">Número de recrutas</label>
+											<input type="text" name="recrutas6" id="recrutas6" onkeyup="somenteNumeros(this);" style="width: 90%">
+											<span  class="resultado2"></span>
+								      	</td>
+								      	<td>
+								      		<label for="vendas6" class="label">Vendas (grupo + pessoal)</label>
+											<input type="text" name="vendas6" id="vendas6" onkeyup="somenteNumeros(this);" style="width: 90%">
+											<span  class="resultado2"></span>
+								      	</td>
+								    </tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<!-- Pergunta 5 -->
+					<div class="container">
+						<div class="row">
+							<div class="col-12 pergunta">
+								<div class="titulo">
+									<p>5) Por fim, faça um plano de ação para apoiar a nomeação de cada Prospect.</p>
+								</div>
+							</div>
+							<table class="table table-border">
+								<tbody>
+									<!-- Prospect 1 -->
+								    <tr>
+								      	<td>
+								      		<label for="prospect" class="label">Prospect</label>
+											<input type="text" name="prospect" id="prospect" class="prospect" disabled="disabled">
+								  		</td>
+								      	<td>	
+								      		<label for="plano" class="label">Plano de ação</label>
+											<textarea name="plano" id="plano"></textarea>
+								      	</td>
+								      	<td>
+								      		<label for="prazo" class="label">Prazo</label>
+											<input type="text" name="prazo" id="prazo">
+								      	</td>
+								    </tr>
+								    <!-- Prospect 2 -->
+								    <tr>
+								      	<td>
+								      		<label for="prospect2" class="label">Prospect</label>
+											<input type="text" name="prospect2" id="prospect2" class="prospect2" disabled="disabled">
+								  		</td>
+								      	<td>	
+								      		<label for="plano2" class="label">Plano de ação</label>
+											<textarea name="plano2" id="plano2"></textarea>
+								      	</td>
+								      	<td>
+								      		<label for="prazo2" class="label">Prazo</label>
+											<input type="text" name="prazo" id="prazo2">
+								      	</td>
+								    </tr>
+								    <!-- Prospect 3 -->
+								    <tr>
+								      	<td>
+								      		<label for="prospect3" class="label">Prospect</label>
+											<input type="text" name="prospect3" id="prospect3" class="prospect3" disabled="disabled">
+								  		</td>
+								      	<td>	
+								      		<label for="plano3" class="label">Plano de ação</label>
+											<textarea name="plano3" id="plano3"></textarea>
+								      	</td>
+								      	<td>
+								      		<label for="prazo3" class="label">Prazo</label>
+											<input type="text" name="prazo" id="prazo3">
+								      	</td>
+								    </tr>
+								    <!-- Prospect 4 -->
+								    <tr>
+								      	<td>
+								      		<label for="prospect4" class="label">Prospect</label>
+											<input type="text" name="prospect4" id="prospect4" class="prospect4" disabled="disabled">
+								  		</td>
+								      	<td>	
+								      		<label for="plano4" class="label">Plano de ação</label>
+											<textarea name="plano4" id="plano4"></textarea>
+								      	</td>
+								      	<td>
+								      		<label for="prazo4" class="label">Prazo</label>
+											<input type="text" name="prazo" id="prazo4">
+								      	</td>
+								    </tr>
+								    <!-- Prospect 5 -->
+								    <tr>
+								      	<td>
+								      		<label for="prospect5" class="label">Prospect</label>
+											<input type="text" name="prospect5" id="prospect5" class="prospect5" disabled="disabled">
+								  		</td>
+								      	<td>	
+								      		<label for="plano5" class="label">Plano de ação</label>
+											<textarea name="plano5" id="plano5"></textarea>
+								      	</td>
+								      	<td>
+								      		<label for="prazo5" class="label">Prazo</label>
+											<input type="text" name="prazo" id="prazo5">
+								      	</td>
+								    </tr>
+								    <!-- Prospect 6 -->
+								    <tr>
+								      	<td>
+								      		<label for="prospect6" class="label">Prospect</label>
+											<input type="text" name="prospect6" id="prospect6" class="prospec6" disabled="disabled">
+								  		</td>
+								      	<td>	
+								      		<label for="plano6" class="label">Plano de ação</label>
+											<textarea name="plano6" id="plano6"></textarea>
+								      	</td>
+								      	<td>
+								      		<label for="prazo6" class="label">Prazo</label>
+											<input type="text" name="prazo" id="prazo6">
+								      	</td>
+								    </tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div id="editor"></div>
+					<input type="submit" style="margin:20px;" class="btn"  value="Salvar">
+					<input type="submit" style="margin:20px;" class="btn" onclick="imprimir()"  value="Imprimir">	
+				</div>
+			</form>
+		</div>
+	</div> 
+	<script src="js/jquery.js" type="text/javascript"></script>
+	<script src="js/framework.js" type="text/javascript"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js" integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs" crossorigin="anonymous"></script>
+	<script>
+
+		/*coloca automaticamente os campos das cidades e consultores preenchidos nos campos 
+		correspondentes das outras perguntas*/
+		$(document).ready(function(){
+	        $(".cidade").on("input", function(){
+	            var textoDigitado = $(this).val();
+	            var inputValor = $(this).attr("data-valor"); // 
+	            $("."+ inputValor).val(textoDigitado);
+		    });
+
+		    $(".consultor").on("input", function(){
+	            var textoDigitado = $(this).val();
+	            var inputValor = $(this).attr("data-valor");
+	            $("."+ inputValor).val(textoDigitado);
+		    });
+	    });
+
+		/* Pega os valores dos ids que comecem com consultores e habitantes e faz os cálculos */
+		$('[id^="consultores"]').change(function(){
+		    var idx = $(this).attr("id").match(/\d+/); 
+		    idx = idx ? idx[0] : ''; // verifico se minha variavel recebe algum valor ou se é vazio
+		    var valor = $('#habitantes'+idx).val();
+		    var valor2 = $(this).val();
+		    var calculo = valor / valor2;
+		    if(calculo>=100){
+		       $(this).next().html("OPORTUNIDADE DE RECRUTAMENTO (!)");  
+		   }
+		});
+
+		$('[id^="lideres"]').change(function(){
+			var idx = $(this).attr("id").match(/\d+/);
+			idx = idx ? idx[0] : '';
+			var valor = $('#consultores'+idx).val();
+			var valor2 = $(this).val();
+			var calculo = valor / valor2;
+		   	if(calculo>=40){
+		       $(this).next().html("OPORTUNIDADE DE NOMEAÇÃO (!)");  
+		   }
+		});
+
+		/* Pega os valores dos ids que comecem com vendas */
+		var tag = '<i class="icofont icofont-check-circled green"></i>';
+		var tag2 = '<i class="icofont icofont-check-circled red"></i>';
+		$('[id^="vendas"]').change(function(){
+		    var idx = $(this).attr("id").match(/\d+/);
+		    idx = idx ? idx[0] : '';
+		    var valor = $(this).val();
+		    if(valor>=4640){
+		       $(this).next().html(tag);    
+		    }else {
+		       $(this).next().html(tag2);
+		    }
+		});
+
+		$('[id^="recrutas"]').change(function(){
+		    var idx = $(this).attr("id").match(/\d+/);
+		    idx = idx ? idx[0] : '';
+		    var valor = $(this).val();
+		    if(valor>=8){
+		       $(this).next().html(tag);    
+		    }else {
+		       $(this).next().html(tag2);
+		    }
+		});
+
+		/* Para poder apenas digitar números em um input="text" */
+		function somenteNumeros(num) {
+	        var er = /[^0-9.]/;
+	        er.lastIndex = 0;
+	        var campo = num;
+	        if (er.test(campo.value)) {
+	          campo.value = "";
+	        }
+    	}
+
+		function imprimir() {
+			window.print();
+		}
+
+	</script>		
+</body>
+</html>

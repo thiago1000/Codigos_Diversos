@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Duplicate a select list using jQuery</title>
+    
+    <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+    <script src="selectScript.js"></script>
+</head>
+<body>
+    <div id="d1">
+        <select id="origSel">
+            <option value="0">Zero</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+        </select>
+    </div>
+
+    <div id="d2"></div>
+
+    <input type="number">
+
+    <script>
+    $(document).ready(function () {
+    // copy the select area
+    $('#origSel').clone().attr('id', 'newSel').attr('name', 'newSel').appendTo($('#d2'));
+
+    // make the current value selected
+    $("#newSel > option[value='" + $('#origSel').val() + "']").attr('selected', 'selected');
+
+});
+    </script>
+</body>
+</html>
