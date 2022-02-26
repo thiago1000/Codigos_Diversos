@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    font-family: 'Lato', sans-serif;
+    color: #b3b3b3;
+    background-color: #31a2ac;
+    text-align: center;
+    margin-top: 0;
+}
+main {
+	background-color: white;
+	margin: 0 auto;
+	width: 60%;
+	margin-top: 30px;
+	padding: 30px;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+span {
+ 	float: left;
+}
+
+p {
+ 	padding: 10px 10px 0;
+}
+
+.form-area, ul {
+	margin: 20px auto;
+	max-width: 550px;
+}
+
+li {
+	list-style-type: none;
+	text-align: left;
+	background-color: transparent;
+	margin: 10px 5px;
+	padding: 15px 10px;
+	border-top: 1px solid #ecedee;
+	border-bottom: 1px solid #ecedee;
+	font-weight: normal;
+	cursor: pointer;
+}
+
+li:hover {
+ 	background: #ECEEF0;
+}
+
+.selected, .selected:hover {
+	background: #FFDEAD;
+}
+
+.correta, .correta:hover {
+	background: #9ACD32;
+	color: white;
+}
+
+.errada, .errada:hover {
+    background: #db3c3c;
+    color: white;
+}
+
+#resposta{
+    transition: All 1.5s ease;
+    -webkit-transition: All 1.5s ease;
+    -moz-transition: All 1.5s ease;
+    -o-transition: All 1.5s ease;
+    opacity: 1;
+    position: relative;
+}
+
+/*========================================================
+        enviar Button
+========================================================*/
+.main button {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    width: 20%;
+    border: none;
+    padding: 15px;
+    color: #FFFFFF;
+}
+
+.enviar:hover, .enviar:active, .enviar:focus {
+    background: #43A047;
+    color:#fff;
+}
+
+.enviar {
+    background: #4CAF50;
+    min-width: 120px;
+}
+
+.next {
+    background: #fa994a;
+    min-width: 120px;
+}
+.next:hover, .next:active, .next:focus {
+    background: #e38a42;
+}
+
+.btn{
+    color: #525ca3;
+    font-weight: 600;
+    border-radius: 25px;
+    padding: 10px 42px;
+    background: #fff;
+    box-shadow: 1px 1px 10px 5px #393d5524;
+}
+
+/*========================================================
+        Resultados
+========================================================*/
+/*.circle{
+  position: relative;
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  background: #bdc3c7;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  overflow: hidden;
+}*/
+
+/*.fill{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80%;
+  background: #31a2ac;
+}*/
+
+.circle h3 {
+    position: absolute;
+    width: 100%;
+    top: 80px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #000;
+    font-size: 40px;
+    line-height: 0;
+    font-weight: normal;
+}
+
+.circle p {
+    margin: 400px;
+}
+
+/*========================================================
+        Confeeti Effect
+========================================================*/
+canvas{
+  	position:absolute;
+    left:0;
+    top:0;
+    z-index:0;
+    border:0px solid #000;
+}
+
+/*========================================================
+        Media Queries
+========================================================*/
+
+@media (max-width: 1023px){
+  main{
+    width: 90%;
+  }
+}

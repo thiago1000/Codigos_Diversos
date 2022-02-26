@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Quiz</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/all.min.css">
+	<script src="js/scorm.api.min.js"></script>
+</head>
+<body>
+	<header></header>
+	<main>
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="wrapper" id="pages">
+        				<span id="quizNumero">1</span><span>/3</span>
+      				</div>
+				</div>
+				<div class="col-12">
+					<div class="quiz-questoes" id="display-area">
+				        <p id="questao"></p>
+				        <ul id="resposta"></ul>
+				        <div id="quiz-resultados">
+      						<button type="button" name="button" class="enviar btn" id="enviar">Responder</button>
+				        </div>
+				    </div>
+				</div>
+			</div>
+		</div>
+		<canvas id="canvas"></canvas>
+	</main>
+
+	<script src="js/jquery.js"></script>
+	<script src="js/popperjs.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script>
+		var questao1 = {
+			questao: "Pergunta 1 ?",
+			respostas: ["Alternativa 1", "Alternativa 2", "Alternativa 3"],
+			correta: 0
+        }
+        var questao2 = {
+			questao: "Pergunta 2 ?",
+			respostas: ["Alternativa 1", "Alternativa 2", "Alternativa 3"],
+			correta: 2
+        }
+        var questao3 = {
+			questao: "Pergunta 3 ?",
+			respostas: ["Alternativa 1", "Alternativa 2", "Alternativa 3"],
+			correta: 2
+        }
+        var questoes = [questao1, questao2, questao3];
+	</script>
+	<script src="js/script.js"></script>
+	<script type="text/javascript">
+	    var scorm = pipwerks.SCORM;
+	    scorm.version = "1.2";
+	    var sco = true;
+	    window.contVid = null;
+	    isLMS = true;
+
+	    var data = {
+			lessonLocation: "1",
+			lessonStatus: "incomplete",
+			scoreRaw: "0",
+			suspendData: ""
+	    }
+
+	    this.iniciar = function () {
+			if (sco) {
+				isLMS = pipwerks.SCORM.init() ? true : false;
+				if (isLMS) {
+				  	sincronizar();
+				}
+			}
+	    }
+
+	    function sincronizar() {
+			pipwerks.SCORM.set("cmi.core.score.min", "0");
+			pipwerks.SCORM.set("cmi.core.score.max", "100");
+			pipwerks.SCORM.set("cmi.core.score.raw", data.scoreRaw);
+			pipwerks.SCORM.set("cmi.core.lesson_location", data.lessonLocation);
+			pipwerks.SCORM.set("cmi.core.lesson_status", data.lessonStatus);
+	    }
+
+	    function setLocation(loc) {
+			loc = Math.round(loc);
+			data.lessonLocation = loc.toString();
+			sincronizar();
+			console.log("chamou setLocation" + loc);
+	    }
+
+	    function setScore(perc) {
+			perc = Math.round(perc);
+			data.scoreRaw = perc.toString();
+			if (perc >= 50) {
+				data.lessonStatus = "passed";
+				// finishContent();
+			}
+			sincronizar();
+			console.log("chamou setScorm" + perc);
+	    }
+
+	    function getLocation() {
+			data.lessonLocation = pipwerks.SCORM.get("cmi.core.lesson_location");
+			return data.lessonLocation;
+	    }
+	    
+	  //   function finishContent() {
+			// if (location.hash != undefined && location.hash != "") {
+			// 	if (location.hash == "#finished") return false;
+			// 	else window.location.hash = "#finished"
+			// } else {
+			// 	window.location.href += "#finished"
+			// }
+			// if (typeof Finalizer != 'undefined') {
+			// 	Finalizer.finished()
+			// }
+			// return true
+	  //   }
+
+	    this.iniciar();
+		
+	    setScore('100');
+	</script>
+</body>
+</html>
